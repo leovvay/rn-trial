@@ -11,6 +11,9 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
+
+import {AdditionalDeviceInfo} from "./containers/AdditionalDeviceInfo";
+
 import { ColorPicker } from 'react-native-color-picker';
 import Slider from 'rn-range-slider';
 import { format } from 'date-fns';
@@ -36,6 +39,13 @@ import {
   getTotalMemory,
   isHeadphonesConnected,
   getTotalDiskCapacity,
+
+  getApiLevel,
+  getApplicationName,
+  getAvailableLocationProviders,
+  getBaseOs,
+  getBuildId,
+
 } from 'react-native-device-info';
 
 import Thumb from './components/Thumb';
@@ -340,6 +350,7 @@ export default function App() {
                 <Text style={styles.value}>{info[1]}</Text>
               </View>
             ))}
+            <AdditionalDeviceInfo styles={styles} />
           </ScrollView>
         </View>
       </Modal>
