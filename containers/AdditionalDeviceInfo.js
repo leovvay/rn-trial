@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import GetLocation from 'react-native-get-location';
+import publicIP from 'react-native-public-ip';
 
 
 import {
@@ -28,7 +29,7 @@ export const AdditionalDeviceInfo = () => {
     useEffect(async ()=> {
         const apiLevel = await getApiLevel();
         const isEmulator = await getEmulator();
-        const ip = await getIpAddress();
+        const ip = await publicIP();
         GetLocation.getCurrentPosition({
             enableHighAccuracy: true,
             timeout: 15000,
@@ -58,7 +59,7 @@ export const AdditionalDeviceInfo = () => {
         </View>: null}
 
             {state.ip !== undefined ? <View style={styles.row}>
-                <Text>ip:</Text>
+                <Text>Public IP:</Text>
                 <Text >{state.ip}</Text>
             </View>: null}
 

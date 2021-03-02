@@ -20,6 +20,7 @@
     "react-native-device-info": "^8.0.2",
     "react-native-gesture-handler": "~1.8.0",
     "react-native-get-location": "^2.0.0",
+    "react-native-public-ip": "^1.0.2",
     "react-native-reanimated": "~1.13.0",
     "react-native-screens": "~2.15.0",
     "react-native-unimodules": "~0.12.0",
