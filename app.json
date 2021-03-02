@@ -1,0 +1,12 @@
+{
+  "name": "OneButtonMagic",
+  "displayName": "OneButtonMagic",
+  "expo": {
+    "name": "OneButtonMagic",
+    "slug": "OneButtonMagic",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
